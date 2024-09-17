@@ -137,7 +137,7 @@ nav ul li a {
 
 .header-content h1 {
     font-size: 2.5em;
-    margin-top: 0px;
+    margin-top: 1px;
 
 }
 
@@ -146,14 +146,32 @@ nav ul li a {
 }
 
 .logo {
-    width: 200px;
-    /* Ajuste o tamanho conforme necessário */
+    width: 20%;
+    max-width: 150px;
+    /* Ajuste o valor conforme necessário */
     height: auto;
     position: absolute;
     top: 20px;
-    right: 300px;
+    right: 20px;
+}
 
-    /* Ajuste conforme necessário para alinhar verticalmente */
+/* Ajustes adicionais para diferentes tamanhos de tela */
+@media (max-width: 768px) {
+    .logo {
+        width: 25%;
+        /* Ajuste para telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 30%;
+        /* Ajuste para dispositivos móveis */
+        right: 10px;
+        /* Ajuste o espaçamento em telas menores */
+        top: 15px;
+        /* Ajuste o espaçamento em telas menores */
+    }
 }
 
 section {
