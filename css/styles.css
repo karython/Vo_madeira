@@ -1,0 +1,472 @@
+:root {
+    --primary-color: #66390c;
+    --secondary-color: #fff;
+    --text-color: #333;
+}
+
+/* Section home*/
+/* Estilos para a seção Home */
+#home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+    background-color: #f4f4f4;
+}
+
+.home-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+
+/* Estilos para o botão de contato */
+.contact-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 25px;
+    font-size: 18px;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #805126;
+}
+
+
+
+/* Estilos para o banner */
+.banner {
+    flex: 2;
+    position: relative;
+}
+
+.banner-carousel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.banner-images {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.banner-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Estilos para o container de informações */
+.company-info {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.company-info h2 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.company-info p {
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 0.5em;
+    text-align: center;
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+nav {
+    margin-top: 2em;
+    /* Espaçamento entre o título e o menu */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header-content h1 {
+    font-size: 2.5em;
+    margin-top: 0px;
+
+}
+
+.header-content p {
+    font-size: 1.2em;
+}
+
+.logo {
+    width: 200px;
+    /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    position: absolute;
+    top: 20px;
+    right: 300px;
+
+    /* Ajuste conforme necessário para alinhar verticalmente */
+}
+
+section {
+    padding: 4em 0;
+    /* Aumentar o padding */
+}
+
+#sobre,
+#portfolio,
+#contato {
+    text-align: center;
+}
+
+.projeto {
+    background-color: #f4f4f4;
+    margin: 20px auto;
+    padding: 1em;
+    max-width: 600px;
+    border-radius: 8px;
+}
+
+#contato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2em 0;
+    background-color: #f9f9f9;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+form label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+form input,
+form textarea {
+    margin-bottom: 15px;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 8px rgba(102, 57, 12, 0.5);
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+button {
+    padding: 15px;
+    font-size: 18px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #805126;
+}
+
+/* Para dispositivos móveis */
+@media (max-width: 600px) {
+    form {
+        padding: 15px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    form {
+        width: 100%;
+        /* Ocupar 100% da largura */
+    }
+
+    .carousel {
+        max-width: 100%;
+        /* Ajustar para ocupar a largura total */
+    }
+
+    button.prev,
+    button.next {
+        font-size: 16px;
+        /* Reduzir o tamanho do botão */
+    }
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 2em 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-column {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.social-media {
+    text-align: right;
+}
+
+.social-media a {
+    margin: 0 10px;
+}
+
+.social-media img {
+    width: 30px;
+    height: 30px;
+    transition: opacity 0.3s ease;
+}
+
+.social-media img:hover {
+    opacity: 0.8;
+}
+
+.company-details {
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.company-details p {
+    margin: 5px 0;
+}
+
+footer p {
+    margin-top: 20px;
+}
+
+.carousel {
+    position: relative;
+    max-width: 600px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/* Seção de portfólio */
+#portfolio-quiosques,
+#portfolio-pergolados,
+#portfolio-decks {
+    padding: 40px 0;
+}
+
+h2 {
+    font-size: 2.5em;
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+h3 {
+    font-size: 1.8em;
+    text-align: left;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    padding-left: 15px;
+    /* Aumentar o espaçamento */
+    border-left: 5px solid var(--primary-color);
+}
+
+.portfolio-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    /* Espaçamento entre o carrossel e a seção de informações */
+    margin-bottom: 40px;
+    /* Espaçamento entre os carrosséis */
+}
+
+/* Adicionar espaçamento entre os carrosséis */
+.carousel {
+    margin-bottom: 40px;
+}
+
+/* Geral para imagens */
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+/* Container que alinha o carrossel e a seção de informações */
+/* Container que alinha o carrossel e a seção de informações */
+.portfolio-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    /* Espaçamento entre o carrossel e a seção de informações */
+    margin-bottom: 40px;
+    /* Espaçamento entre os carrosséis */
+}
+
+/* Estilos para a seção de informações */
+.info {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos */
+.info h4 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+/* Texto de informações */
+.info p {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+/* Sessão Contato*/
+button.prev,
+button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Botão TOPO */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.8;
+}
+
+#back-to-top i {
+    font-size: 20px;
+}
+
+#back-to-top:hover {
+    background-color: #805126;
+    opacity: 1;
+}
+
+#back-to-top:active {
+    transform: scale(0.9);
+}
