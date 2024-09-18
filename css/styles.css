@@ -19,6 +19,22 @@ html {
     background-color: #f4f4f4;
 }
 
+#sobre {
+    background-color: #f3d2b2;
+}
+
+#portfolio-quiosques{
+    background-color: #eaad61;
+}
+
+#portfolio-pergolados{
+    background-color: #be8549;
+}
+
+#portfolio-decks{
+    background-color: #915e31;
+}
+
 .home-content {
     display: flex;
     width: 100%;
@@ -131,8 +147,10 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 
 }
+
 
 nav {
     margin-top: 2em;
@@ -218,9 +236,13 @@ nav ul li a:focus {
 /* Ajustes adicionais para diferentes tamanhos de tela */
 @media (max-width: 768px) {
     .logo {
-        width: 25%;
-        /* Ajuste para telas menores */
+        position: static;
+        /* Remove a posição absoluta para telas menores */
+        width: 40%;
+        max-width: 150px;
+        margin-bottom: 20px;
     }
+    
 
     #home .banner-carousel {
         width: 100%;
@@ -264,13 +286,13 @@ nav ul li a:focus {
     }
 
     .carousel {
-        flex: 1;
+        max-width: 100%;
         /* O carrossel ocupa 100% da largura em telas menores */
     }
 
     .info {
-        flex: 1;
-        /* As informações ocupam 100% da largura em telas menores */
+        flex: none;
+        width: 100%;
     }
 }
 
@@ -354,19 +376,31 @@ section {
     /* Aumentar o padding */
 }
 
+@media only screen and (min-width: 1920px) {
+    .container {
+        padding: 0 5%; /* Reduzir o padding lateral para telas maiores */
+    }
+}
+
+.container {
+    max-width: 1200px; /* Defina a largura máxima do contêiner conforme necessário */
+    margin: 0 auto; /* Centralizar o contêiner na tela */
+    padding: 0 20px; /* Espaçamento interno */
+    box-sizing: border-box; /* Incluir padding e border no cálculo da largura */
+}
+
 #sobre,
+#home,
 #portfolio,
 #contato {
     text-align: center;
+    border: 1px solid #ddd; /* Borda ao redor das seções */
+    border-radius: 3px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    
 }
 
-.projeto {
-    background-color: #f4f4f4;
-    margin: 20px auto;
-    padding: 1em;
-    max-width: 600px;
-    border-radius: 8px;
-}
+
 
 #contato {
     display: flex;
@@ -536,8 +570,10 @@ footer p {
 }
 
 .carousel {
+    flex: 0 0 70%;
+    /* 70% para a imagem do carrossel */
     position: relative;
-    max-width: 600px;
+    max-width: 100%;
     margin: 20px auto;
     overflow: hidden;
     border-radius: 8px;
@@ -575,34 +611,44 @@ h3 {
     /* Espaçamento entre o carrossel e a seção de informações */
     margin-bottom: 40px;
     /* Espaçamento entre os carrosséis */
+    padding: 0 5%;
+}
+
+#portfolio h3{
+    color: white;
 }
 
 /* Adicionar espaçamento entre os carrosséis */
 .carousel {
-    margin-bottom: 40px;
-    flex: 0 0 60%;
+    flex: 0 0 70%;
+    /* 70% para a imagem do carrossel */
+    position: relative;
+    max-width: 100%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 8px;
 }
 
 /* Geral para imagens */
 .carousel-images {
     display: flex;
-    transition: transform 0.5s ease;
+    transition: transform 1s ease-in-out;
+}
+
+.carousel-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    max-width: 100%;
 }
 
 /* Container que alinha o carrossel e a seção de informações */
-/* Container que alinha o carrossel e a seção de informações */
-.portfolio-container {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    /* Espaçamento entre o carrossel e a seção de informações */
-    margin-bottom: 40px;
-    /* Espaçamento entre os carrosséis */
-}
+
 
 /* Estilos para a seção de informações */
 .info {
-    flex: 0 0 40%;
+    flex: 0 0 30%;
+    /* 30% para as informações */
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 8px;
