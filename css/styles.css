@@ -23,16 +23,20 @@ html {
     background-color: #f3d2b2;
 }
 
-#portfolio-quiosques{
-    background-color: #eaad61;
-}
-
-#portfolio-pergolados{
+#portfolio-quiosques {
     background-color: #be8549;
 }
 
-#portfolio-decks{
-    background-color: #915e31;
+#portfolio-pergolados {
+    background-color: #be8549;
+}
+
+#portfolio-decks {
+    background-color: #be8549;
+}
+
+#portfolio-outros {
+    background-color: #be8549;
 }
 
 .home-content {
@@ -242,7 +246,7 @@ nav ul li a:focus {
         max-width: 150px;
         margin-bottom: 20px;
     }
-    
+
 
     #home .banner-carousel {
         width: 100%;
@@ -378,15 +382,20 @@ section {
 
 @media only screen and (min-width: 1920px) {
     .container {
-        padding: 0 5%; /* Reduzir o padding lateral para telas maiores */
+        padding: 0 5%;
+        /* Reduzir o padding lateral para telas maiores */
     }
 }
 
 .container {
-    max-width: 1200px; /* Defina a largura máxima do contêiner conforme necessário */
-    margin: 0 auto; /* Centralizar o contêiner na tela */
-    padding: 0 20px; /* Espaçamento interno */
-    box-sizing: border-box; /* Incluir padding e border no cálculo da largura */
+    max-width: 1200px;
+    /* Defina a largura máxima do contêiner conforme necessário */
+    margin: 0 auto;
+    /* Centralizar o contêiner na tela */
+    padding: 0 20px;
+    /* Espaçamento interno */
+    box-sizing: border-box;
+    /* Incluir padding e border no cálculo da largura */
 }
 
 #sobre,
@@ -394,10 +403,13 @@ section {
 #portfolio,
 #contato {
     text-align: center;
-    border: 1px solid #ddd; /* Borda ao redor das seções */
-    border-radius: 3px; /* Bordas arredondadas */
-    padding: 20px; /* Espaçamento interno */
-    
+    border: 1px solid #ddd;
+    /* Borda ao redor das seções */
+    border-radius: 3px;
+    /* Bordas arredondadas */
+    padding: 20px;
+    /* Espaçamento interno */
+
 }
 
 
@@ -624,7 +636,7 @@ h3 {
     padding: 0 5%;
 }
 
-#portfolio h3{
+#portfolio h3 {
     color: white;
 }
 
@@ -743,11 +755,15 @@ button:hover {
 }
 
 a i {
-    font-size: 24px; /* Tamanho do ícone */
-    color: #333; /* Cor do ícone */
-    margin-right: 10px; /* Espaçamento entre os ícones */
-  }
-  
-  a i:hover {
-    color: #1f3eee; /* Cor ao passar o mouse sobre o ícone */
-  }
+    font-size: 24px;
+    /* Tamanho do ícone */
+    color: #333;
+    /* Cor do ícone */
+    margin-right: 10px;
+    /* Espaçamento entre os ícones */
+}
+
+a i:hover {
+    color: #1f3eee;
+    /* Cor ao passar o mouse sobre o ícone */
+}
