@@ -128,3 +128,20 @@ menuIcon.addEventListener("click", () => {
   icon.classList.toggle("bx-menu");
   icon.classList.toggle("bx-x");
 });
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const isMobile = window.innerWidth <= 480;
+
+  if (isMobile) {
+    document.querySelectorAll('.blur-mobile-only').forEach(el => {
+      el.classList.remove('animate-blur');
+    });
+  }
+});
