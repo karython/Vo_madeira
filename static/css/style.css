@@ -429,7 +429,7 @@ nav .logo {
 }
 
 .card1:hover {
-  transform: scale(1.01);
+  transform: translateY(-10px);
   opacity: 0.93;
 }
 
