@@ -22,32 +22,9 @@
 }
 
 /* ===== Notebooks (>=1024px) ===== */
-@media (min-width: 1024px) {
-  .Cards {
-    grid-template-columns: repeat(3, 1fr);
-  }
+@media (max-width: 1200px) {
 
-  .quiosque-fotos, .banco-fotos {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .Contato {
-    gap: 50px;
-    padding: 80px 40px;
-  }
-
-  .hero-text {
-    font-size: 18px;
-  }
-}
-
-@media screen and (max-width: 767px){ 
-
-* {
-  box-sizing: border-box;
-}
-
-nav {
+  nav {
    margin-inline: 20px;
    display: flex;
    justify-content: space-between;
@@ -62,7 +39,7 @@ nav {
     width: 60%;
     height: 100vh;
     background-color: #2e2206ca;
-    backdrop-filter: blur(30px);
+    backdrop-filter: blur(20px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -133,6 +110,133 @@ nav {
   height: auto;
 }
 
+  .Cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .quiosque-fotos, .banco-fotos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .Contato {
+    gap: 50px;
+    padding: 80px 40px;
+  }
+
+  .hero-text {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 767px){ 
+
+* {
+  box-sizing: border-box;
+}
+
+nav {
+   margin-inline: 20px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 20px;
+  }
+
+.nav-lista {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 60%;
+    height: 100vh;
+    background-color: #2e2206ca;
+    backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding-left: 60px;
+    padding-bottom: 180px;
+    gap: 40px;
+    transition: right 0.5s ease-in-out; 
+    z-index: 1000;
+  }
+
+.nav-lista.active {
+    right: 0; /* desliza para dentro da tela pela direita */
+  }
+
+
+.nav-lista li {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: 0.2s ease;
+  }
+
+.nav-lista.active li {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+.nav-lista a {
+  display: inline-block;
+  text-decoration: none;
+  color: #FAF5E9;
+  font-size: 24px;
+  position: relative;
+  font-weight: 400;
+   } 
+
+/* atraso pra efeito cascata */
+.nav-lista.active li:nth-child(1) { transition-delay: 0.1s; }
+.nav-lista.active li:nth-child(2) { transition-delay: 0.2s; }
+.nav-lista.active li:nth-child(3) { transition-delay: 0.3s; }
+.nav-lista.active li:nth-child(4) { transition-delay: 0.4s; }
+
+/* Ícone hambúrguer visível no mobile */
+.menu-icon {
+  display: block;
+  z-index: 1100;
+  font-size: 40px;
+  margin-left: -10px;
+  }
+
+.menu-icon i {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.menu-icon i.bx-menu {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+.menu-icon i.bx-x {
+  opacity: 1;
+  transform: rotate(180deg);
+}
+
+  nav .logo {
+  width: 160px;
+  margin-left: -40px;
+  height: auto;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #060400a2;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+  z-index: 900; /* abaixo do menu (1000), acima do conteúdo */
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
 
 
 .martelo1 {
@@ -158,7 +262,6 @@ nav {
   top: 60%;
   left: 50%;
   transform: translate(-50%, -128%);
-  text-align: center;
   color: #FAF5E9;
   z-index: 2;
   max-width: 400px;
@@ -169,18 +272,16 @@ nav {
   margin-bottom: 15px;
   font-family: "PT Serif Caption", serif;
   font-weight: 300;
-  animation: fadeUp 1s ease forwards;
+  text-align: left;
 }
 
 .hero-content p {
-  margin: 0 auto;
-  text-align: center;
+  text-align: left;
   max-width: 400px;
   font-size: 17px;
   margin-bottom: 25px;
   font-family: "Raleway", sans-serif;
   line-height: 140%;
-  animation: fadeUp 1s ease forwards;
 }
 
 .destaque {
@@ -344,7 +445,7 @@ nav {
 
 .itens-portfolio {
   position: relative;
-  height: 4700px;
+  height: auto;
   padding: 40px 20px;
   margin-top: -20px;
   z-index: 1;
@@ -423,7 +524,7 @@ nav {
 
     .itens-portfolio {
     position: relative;
-    height: 15650px;
+    height: auto;
     background-color: #2c1e00; 
     padding: 40px 20px;
     z-index: 1;
@@ -710,6 +811,7 @@ nav {
     font-weight: 500;
   }
 
+
   .hero-btn3 {
     width: 300px;
     height: 80px;
@@ -826,7 +928,6 @@ nav {
   margin-bottom: 15px;
   font-family: "PT Serif Caption", serif;
   font-weight: 300;
-  animation: fadeUp 1s ease forwards;
 }
 
 .hero-content p {
@@ -893,7 +994,7 @@ nav {
     width: 60%;
     height: 100vh;
     background-color: #2e2206ca;
-    backdrop-filter: blur(30px);
+    backdrop-filter: blur(20px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1000,12 +1101,11 @@ nav {
   margin-bottom: 15px;
   font-family: "PT Serif Caption", serif;
   font-weight: 300;
-  animation: fadeUp 1s ease forwards;
 }
 
 .hero-content p {
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
   max-width: 400px;
   font-size: 15px;
   margin-bottom: 25px;
@@ -1176,7 +1276,7 @@ nav {
 
 .itens-portfolio {
   position: relative;
-  height: 4700px;
+  height: auto;
   padding: 40px 20px;
   margin-top: -20px;
   z-index: 1;
@@ -1471,7 +1571,7 @@ nav {
     width: 60%;
     height: 100vh;
     background-color: #2e2206ca;
-    backdrop-filter: blur(30px);
+    backdrop-filter: blur(20px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1578,12 +1678,11 @@ nav {
   margin-bottom: 15px;
   font-family: "PT Serif Caption", serif;
   font-weight: 300;
-  animation: fadeUp 1s ease forwards;
 }
 
 .hero-content p {
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
   max-width: 400px;
   font-size: 17px;
   margin-bottom: 25px;
@@ -1618,7 +1717,6 @@ nav {
   background: linear-gradient(120deg, #F5E2B7, #C1AA74);
   transition: background 0.5s ease-in-out;
 }
-
 
 .Sobre {
     display: grid;
@@ -2045,7 +2143,7 @@ nav {
     width: 60%;
     height: 100vh;
     background-color: #2e2206ca;
-    backdrop-filter: blur(30px);
+    backdrop-filter: blur(20px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -2152,12 +2250,11 @@ nav {
   margin-bottom: 15px;
   font-family: "PT Serif Caption", serif;
   font-weight: 300;
-  animation: fadeUp 1s ease forwards;
 }
 
 .hero-content p {
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
   max-width: 400px;
   font-size: 17px;
   margin-bottom: 25px;
@@ -2608,12 +2705,11 @@ nav {
   margin-bottom: 15px;
   font-family: "PT Serif Caption", serif;
   font-weight: 300;
-  animation: fadeUp 1s ease forwards;
 }
 
 .hero-content p {
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
   max-width: 400px;
   font-size: 16px;
   margin-bottom: 25px;
@@ -2699,12 +2795,11 @@ nav {
   margin-bottom: 15px;
   font-family: "PT Serif Caption", serif;
   font-weight: 300;
-  animation: fadeUp 1s ease forwards;
 }
 
 .hero-content p {
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
   max-width: 400px;
   font-size: 15px;
   margin-bottom: 25px;

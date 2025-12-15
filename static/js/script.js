@@ -122,11 +122,22 @@ document.addEventListener("DOMContentLoaded", function () {
 const menuIcon = document.getElementById("menu-icon");
 const navLista = document.querySelector(".nav-lista");
 const icon = menuIcon.querySelector("i");
+const overlay = document.getElementById("overlay");
 
 menuIcon.addEventListener("click", () => {
   navLista.classList.toggle("active");
+  overlay.classList.toggle("active");
+
   icon.classList.toggle("bx-menu");
   icon.classList.toggle("bx-x");
+});
+
+overlay.addEventListener("click", () => {
+  navLista.classList.remove("active");
+  overlay.classList.remove("active");
+
+  icon.classList.remove("bx-x");
+  icon.classList.add("bx-menu");
 });
 
 
@@ -145,3 +156,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+
+
+
+/* Scroll Suave da Pagina */
+ document.addEventListener('DOMContentLoaded', function () {
+        const lenis = new Lenis();
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+    });
+

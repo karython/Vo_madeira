@@ -1,0 +1,79 @@
+@media screen and (max-width: 1800px) {
+    .martelo1,
+    .martelo2 {
+        display: none;
+    }
+}
+
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+    nav {
+        margin-inline: 94px;
+    }
+
+    .martelo1,
+    .martelo2 {
+        display: none;
+    }
+
+    .hero-content {
+        transform: translate(-50%, -65%);
+    }
+
+    .hero-content h1 {
+        font-size: 60px;
+    }
+
+    .hero-content p {
+        font-size: 20px;
+        white-space: nowrap;
+    }
+
+    .quiosque-fotos {
+        padding-top: 60px;
+        display: block;
+        padding: 0;
+        margin-inline: 94px;
+        width: 1251px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .text-itens-portfolio1,
+    .text-itens-portfolio2,
+    .text-itens-portfolio3,
+    .text-itens-portfolio4,
+    .text-itens-portfolio35 {
+        margin-bottom: 40px;
+    }
+
+    .banco-fotos {
+        padding: 0;
+        margin-inline: 300px;
+    }
+
+    .last-cta {
+        max-width: 1251px;
+        margin: 0;
+        margin-top: 60px;
+        margin-inline: 94px;
+    }
+
+    .itens-portfolio {
+        height: auto;
+    }
+
+    .Contato {
+        display: flex;
+        justify-content: space-between;
+        gap: 60px;
+        box-sizing: border-box;
+        padding-bottom: 140px;
+        margin-inline: 94px;
+        padding: 0;
+    }
+
+    .form-contato {
+        margin-right: 94px;
+    }
+}

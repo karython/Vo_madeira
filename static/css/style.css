@@ -34,18 +34,6 @@ body {
   }
 }
 
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    filter: blur(15px);
-    transform: translateY(-80px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 .animate-on-scroll {
   opacity: 0;
   transform: translateY(80px);
@@ -97,7 +85,6 @@ body {
 }
 
 
-
 section  {
     background-size: cover;
     background-position: center;
@@ -109,7 +96,7 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: url(/static/img/nav-bar-bg.jpg);
+    background: url(/static/img/nav-bar-bg.webp);
 
 }
 
@@ -218,7 +205,6 @@ nav .logo {
   margin-bottom: 15px;
   font-family: "PT Serif Caption", serif;
   font-weight: 300;
-  animation: fadeUp 1s ease forwards;
 }
 
 .hero-content p {
@@ -226,7 +212,6 @@ nav .logo {
   margin-bottom: 25px;
   font-family: "Raleway", sans-serif;
   line-height: 150%;
-  animation: fadeUp 1s ease forwards;
 }
 
 .destaque {
@@ -253,7 +238,6 @@ nav .logo {
   animation: pulsar 1.5s infinite ease-in-out;
   background: linear-gradient(120deg, #F5E2B7, #C1AA74);
   transition: background 0.5s ease-in-out;
-  
 }
 
 .Sobre {
@@ -323,12 +307,12 @@ nav .logo {
 }
 
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 4px;
   overflow-y: auto;
 }
 
 ::-webkit-scrollbar-track {
-  background: #46330A
+  background: #FAF5E9
 }
 
 ::-webkit-scrollbar-thumb {
@@ -414,7 +398,7 @@ nav .logo {
   width: 390px;
   height: 390px;
   background-color: #46330A;
-  background-image: url(/static/img/CARD\ 1.png);
+  background-image: url(/static/img/CARD\ 1.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -444,6 +428,7 @@ nav .logo {
   font-size: 18px;
   color: #faf5e9c9;
   line-height: 150%;
+  text-wrap: balance;
   font-weight: 500;
   text-align: left;
 }
@@ -497,10 +482,9 @@ nav .logo {
   font-weight: 500;
 }
 
-
 .itens-portfolio {
   position: relative;
-  height: 4770px;
+  height: auto;
   background-color: #2E2206; 
   padding: 80px 20px;
   margin-top: -20px;
@@ -624,7 +608,7 @@ nav .logo {
   display: none;
   position: fixed;
   z-index: 4;
-  padding-top: 200px;
+  padding-top: 160px;
   left: 0;
   top: 0;
   width: 100%;
@@ -635,10 +619,13 @@ nav .logo {
   animation: fadeIn 0.4s;
 }
 
+
 /* Quando ativo */
 .lightbox.show {
   display: block;
   opacity: 1;
+  overflow-x: hidden;
+  z-index: 1111;
 }
 
 /* Animação fade-out */
@@ -660,16 +647,15 @@ nav .logo {
 .close {
   position: absolute;
   top: 20px;
-  right: 35px;
+  right: 40px;
   color: #fff;
-  font-size: 35px;
-  font-weight: bold;
+  font-size: 45px;
   cursor: pointer;
-  transition: color 0.3s;
+  transition: transform 0.2s ease;
 }
 
 .close:hover {
-  color: #ccc;
+  transform: scale(1.3);
 }
 
 /* Setas */
@@ -684,12 +670,17 @@ nav .logo {
   font-size: 30px;
   border-radius: 3px;
   user-select: none;
-  transition: transform 0.4s ease;
+  transition: transform 0.2s ease;
 }
 
 .prev:hover,
 .next:hover {
   transform: scale(1.3);
+}
+
+.prev:active,
+.next:active {
+  transform: scale(0.9);
 }
 
 .prev {
@@ -713,7 +704,7 @@ nav .logo {
   margin-left: 280px;
   height: 180px;
   background-color: #46330A;
-  background-image: url(/static/img/last-cta-foto.png);
+  background-image: url(/static/img/last-cta-foto.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -739,7 +730,7 @@ nav .logo {
 .last-cta p {
   color: #faf5e9c9;
   line-height: 1.6;
-  font-size: 20px;
+  font-size: 18px;
   padding-bottom: 25px;
   text-align: left;
   font-weight: 500;
@@ -802,7 +793,7 @@ nav .logo {
   margin-right: 240px;
   padding: 50px;
   background-color: rgba(70, 51, 10, 0.85);
-  background: url(/static/img/FORM.png); 
+  background: url(/static/img/FORM.webp); 
   border-radius: 15px;
   color: #FAF5E9;
   font-family: "Raleway", sans-serif;
@@ -886,6 +877,7 @@ nav .logo {
   color: #faf5e9bf;
   padding: 60px 0;
   height: 366px;
+  border-radius: 30px 30px 0 0;
   font-family: 'Raleway', sans-serif;
 }
 .CNPJ{
@@ -957,8 +949,7 @@ hr {
 }
 
 .footer-column.social-media a:hover {
-  color: #C1AA74; 
-  transform: scale(1.1);
+  color: #FAF5E9; 
 }
 
 .footer-col3 ul li p {
